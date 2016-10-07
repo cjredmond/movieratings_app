@@ -5,8 +5,21 @@
     <title>Movie Info</title>
   </head>
   <body>
+    <h3><a href="http://localhost:8000/allmovies/">All Movies</a></h3>
     <p>
-      {{ title }}
+      {{ movie.title }}
+      {{ movie.avg_rating }}
+
+      <p>
+      {% for row in rating %}
+       <p>
+         <a href="/rater/{{ row.rater.id }}">{{ row.rater }} : {{ row.rating }}</a>
+
+
+       </p>
+       {% endfor %}
+    </p>
+
     </p>
   </body>
 </html>

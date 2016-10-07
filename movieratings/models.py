@@ -47,9 +47,9 @@ class Rater(models.Model):
 
     def __str__(self):
         return self.occupation
-
+    @property
     def avg_rating(self):
-        return Rating.objects.filter(rater = self).aggregate(Avg('rating')).get('rating_avg')
+        return Rating.objects.filter(rater = self).aggregate(Avg('rating')).get('rating__avg')
 
 
 
