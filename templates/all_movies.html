@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>all movies</title>
+  </head>
+  <body>
+    <h1>All Movies</h1>
+    <h3><a href="http://localhost:8000/">Home</a></h3>
+    <p>
+         {% for row in all_movies %}
+          <p>
+            <a href="/movie/{{ row.id }}">{{ row }}</a>
+
+          </p>
+          {% endfor %}
+       </p>
+
+  </body>
+</html>
