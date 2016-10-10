@@ -38,6 +38,13 @@ class Movie(models.Model):
 
     def update_avg(self):
         self.average_rating = self.avg_rating()
+    @property
+    def reviews(self):
+        count = 0
+        amount = Rating.objects.filter(movie=self)
+        for x in amount:
+            count = count +1
+        return count
 
 class Rater(models.Model):
     age = models.IntegerField()

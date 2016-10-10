@@ -14,7 +14,8 @@ def attempt():
     top = sorted(mvs, key=operator.attrgetter('avg_rating'))
     empty = []
     for x in top:
-        empty.append(x)
+        if x.reviews > 20:
+            empty.append(x)
     empty.reverse()
 
     return empty[:20]
