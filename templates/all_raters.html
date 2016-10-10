@@ -1,12 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'movieratings/index.css' %}" />
     <meta charset="utf-8">
     <title>All Raters</title>
   </head>
-  <body>
+  <body> <div>
 <h1>All Raters</h1>
-<h3><a href="http://localhost:8000/">Home</a></h3>
+<h3><a href="http://localhost:8000/">Home</a></h3></div>
 <p>
      {% for row in all_raters %}
       <p>

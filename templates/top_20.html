@@ -1,20 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'movieratings/index.css' %}" />
     <meta charset="utf-8">
     <title>TOP 20 PAGE</title>
   </head>
-  <body>
+  <body> <div>
     <h2>Top 20 Movies</h2>
-    <h4><a href="http://localhost:8000/">Home</a></h4>
-
+    <h4><a href="http://localhost:8000/">Home</a></h4></div>
+<ol>
     {% for movie in twenty %}
-     <p>
-       <a href="/movie/{{movie.id}}">{{ movie }} </a>
 
 
-     </p>
+       <li><a href="/movie/{{movie.id}}">{{ movie }} </a></li>
+
+
+
+
+
      {% endfor %}
-    </p>
+   </ol>
+
   </body>
 </html>

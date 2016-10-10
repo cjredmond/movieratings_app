@@ -23,7 +23,6 @@ def top_20_view(request):
     context = {
     'this' : get_av_for_movies(),
     'twenty' : attempt(),
-    'top' : attempt()
     }
     return render(request, "top_20.html",context)
 

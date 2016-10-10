@@ -1,17 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'movieratings/index.css' %}" />
     <meta charset="utf-8">
     <title>Movie Info</title>
   </head>
   <body>
-    <h3><a href="http://localhost:8000/allmovies/">All Movies</a></h3>
+    <div>
+    <h3><a href="http://localhost:8000/allmovies/">All Movies</a></h3></div>
     <p>
       {{ movie.title }}
-      {{ movie.avg_rating }}
+      Average Rating: {{ movie.avg_rating }}
 
       <p>
       {% for row in rating %}
+
        <p>
          <a href="/rater/{{ row.rater.id }}">{{ row.rater }} : {{ row.rating }}</a>
 

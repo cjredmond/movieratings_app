@@ -1,13 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'movieratings/index.css' %}" />
     <meta charset="utf-8">
     <title>Index Page</title>
   </head>
   <body>
-<h1>This is the index page</h1>
+
+
+<div>
+<h1>Home Page</h1>
 <a href="http://localhost:8000/allmovies/">All Movies</a>
 <a href="http://localhost:8000/allraters/">All Raters</a>
 <a href="http://localhost:8000/top20">Top 20 Movies</a>
-  </body>
+</div>
+
+
 </html>

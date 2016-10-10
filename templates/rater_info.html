@@ -1,16 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'movieratings/index.css' %}" />
     <meta charset="utf-8">
     <title>Rater Info</title>
   </head>
   <body>
-    <h3><a href="http://localhost:8000/allraters/">All Raters</a></h3>
+    <div>
+    <h3><a href="http://localhost:8000/allraters/">All Raters</a></h3></div>
     <p>
-      {{ rater.occupation }}
-      {{ rater.gender }}
-      {{ rater.zip_code }}
-      {{ rater.avg_rating }}
+      Occupation: {{ rater.occupation }} <br>
+      Gender: {{ rater.gender }} <br>
+      Zip Code: {{ rater.zip_code }} <br>
+      Average Rating {{ rater.avg_rating }} <br>
+      Movies Rated:
 
 
     </p>
